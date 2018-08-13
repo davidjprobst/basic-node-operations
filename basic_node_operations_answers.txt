@@ -1,0 +1,34 @@
+1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+> sort - returns data sorted alphabetically by line. uses characters in each line to sort data
+  wc - output = "42     107    1005 commands.js" 42 is the count of newline, 107 is the number of words, 1005 is the number of characters in commands.js
+  uniq - shows only unique lines from commands.js. repeated lines are filtered out and not included in outpu
+
+
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+>  input = echo testing this data | wc
+  output =      1       3      18
+
+  output is wc of "testing this data". it shows 1,3,18 because "testing this data" has 1 line, 3 words and 18 characters
+
+
+
+6. In this checkpoint, you encountered built-in JavaScript methods as well as the new ES6 syntax. Review the information below before attempting the programming challenge.
+
+``` js
+
+function reverseWords(inputString) {
+  var splitSentence = inputString.split(' ');
+  var reversedSentence = [];
+  splitSentence.forEach((word) => {
+    var splitWord = word.split('')
+    var reversedWord = splitWord.reverse();
+    var joinedWord = reversedWord.join('');
+    reversedSentence.push(joinedWord);
+  })
+  return reversedSentence.join(' ');
+};
+
+```
